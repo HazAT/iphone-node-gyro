@@ -1,4 +1,4 @@
 .DS_Store
 build
-*xcuserdata*
+xcuserdata
 node_modules
