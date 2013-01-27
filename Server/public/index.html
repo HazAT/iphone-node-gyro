@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width">
+
+	<title>iPhone CSS 3</title>
+	<link rel='stylesheet' type='text/css' href='/stylesheets/base.css'>
+
+	<script type="text/javascript" src="/javascripts/traqball.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+	<script type="text/javascript">
+		window.addEventListener("load", callback, false);
+
+		var box;
+		function callback(){
+		    box = new Traqball({stage: "stage", axis: [-1,0,0], angle: 0});
+		}
+		var socket = io.connect('//')
+
+		socket.on('move', function (data) {
+			box.setup({stage: "stage", axis: [parseFloat(data.x), parseFloat(data.y), parseFloat(data.z)], angle: parseFloat(data.w)});
+		});
+	</script>
+</head>
+
+<body id="body">
+<section id="stage">
+	<article id="box">
+		<section id="front"></section>
+	 	<section id="top"></section>
+	 	<section id="bottom"></section>
+		<section id="back"></section>
+		<section id="left"></section>
+		<section id="right"></section>
+	</article>
+</section>
+
+</body>
+</html>

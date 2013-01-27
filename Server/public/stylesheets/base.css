@@ -1,0 +1,167 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: #fff;
+	background-repeat:no-repeat;
+}
+
+section#stage{
+	-webkit-perspective: 700px;
+	-moz-perspective: 700px;
+	-ms-perspective: 700px;
+	-o-perspective: 700px;
+	perspective: 700px;
+	-webkit-perspective-origin: 50% 50%;
+	-moz-perspective-origin: 50% 50%;
+	-o-perspective-origin: 50% 50%;
+	-ms-perspective-origin: 50% 50%;
+	perspective-origin: 50% 50%;
+	display: block;
+	position: relative;
+	left: 50%;
+	width: 600px;
+	height: 600px;
+	margin: 20px 0px 0px -300px;
+	-webkit-box-reflect:below -100px
+    -webkit-gradient(linear, left top, left bottom, from(transparent),
+    color-stop(0.5, transparent), to(#ffffff));
+}
+
+article#box{
+	-webkit-transform: rotate3d(1,0,0,-40deg);
+	-moz-transform: rotate3d(1,0,0,-40deg);
+	-ms-transform: rotate3d(1,0,0,-40deg);
+	-o-transform:  rotate3d(1,0,0,-40deg);
+	transform:  rotate3d(1,0,0,-40deg);
+	cursor: move;
+	position: relative;
+	margin-top: -280px;
+	margin-left: -120px;
+	position: absolute;
+	top: 50%; 
+	left: 50%;
+	width: 239px;
+	height: 500px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+#box section{
+	margin-top: -250px;
+	margin-left: -117px;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	top: 50%; 
+	left: 50%;
+	-webkit-transform-style: flat;
+	-moz-transform-style: flat;
+	-o-transform-style: flat;
+	transform-style: flat;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+#front
+{
+	width:239px;
+	height: 500px;
+	background: url(/images/iphone-front.png) no-repeat #030303;
+	-webkit-transform: translate3d(0px, 0px, 10px);
+	-moz-transform: translate3d(0px, 0px, 10px);
+	-o-transform: translate3d(0px, 0px, 10px);
+	transform: translate3d(0px, 0px, 10px);
+	
+}
+
+#back{
+	width:239px;
+	height: 500px;
+	background: url(/images/iphone-back.png) no-repeat #030303;
+	-webkit-transform: translate3d(0px, 0px, 10px);
+	-moz-transform: translate3d(0px, 0px, 10px);
+	-o-transform: translate3d(0px, 0px, 10px);
+	transform: translate3d(0px, 0px, 10px);
+	
+}
+
+#top{
+	text-indent: -999px;
+	overflow: hidden;
+	width:239px;
+	height: 20px;
+	background-image:none;
+	background-color: #030303;
+	-webkit-transform: rotateX(90deg) translate3d(0px, 0px, 10px);
+	-moz-transform: rotateX(90deg) translate3d(0px, 0px, 10px);
+	-o-transform: rotateX(90deg) translate3d(0px, 0px, 10px);
+	-transform: rotateX(90deg) translate3d(0px, 0px, 10px);
+}
+
+#bottom{
+	text-indent: -999px;
+	overflow: hidden;
+	width:239px;
+	height: 20px;
+	-webkit-transform: rotateX(-90deg) translate3d(0px, 0px, 490px);
+	-moz-transform: rotateX(-90deg) translate3d(0px, 0px, 490px);
+	-o-transform: rotateX(-90deg) translate3d(0px, 0px, 490px);
+	-transform: rotateX(-90deg) translate3d(0px, 0px, 490px);
+	background-image:none;
+	background-color: #030303;
+}
+
+#back{
+	-webkit-transform: rotateY(180deg) translate3d(0px, 0px, 10px);
+	-moz-transform: rotateY(180deg) translate3d(0px, 0px, 10px);
+	-o-transform: rotateY(180deg) translate3d(0px, 0px, 10px);
+	-transform: rotateY(180deg) translate3d(0px, 0px, 10px);
+	
+}
+#left{
+	width: 20px;
+	height: 500px;
+	-webkit-transform: rotateY(-90deg) translate3d(0px, 0px, 10px);
+	-moz-transform: rotateY(-90deg) translate3d(0px, 0px, 10px);
+	-o-transform: rotateY(-90deg) translate3d(0px, 0px, 10px);
+	-transform: rotateY(-90deg) translate3d(0px, 0px, 10px);
+	
+	background-color: #030303;
+}
+
+#right{
+	width: 20px;
+	height: 500px;
+	-webkit-transform: rotateY(90deg) translate3d(0px, 0px, 229px);
+	-moz-transform: rotateY(90deg) translate3d(0px, 0px, 229px);
+	-o-transform: rotateY(90deg) translate3d(0px, 0px, 229px);
+	-transform: rotateY(90deg) translate3d(0px, 0px, 229px);
+	background-color: #030303;
+	background-image:none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+	visibility: hidden;
+	overflow:hidden;
+	font-size: 0px;
+}
+
+.clearfix {
+	display: inline-block;
+}
