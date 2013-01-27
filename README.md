@@ -14,3 +14,14 @@ Install
 4. 	Goto `http://localhost:3000` in your Browser
 5. 	Start the App on iPhone
 6. 	Important you have to enter the IP address of you computer not localhost … your iPhone doesn't know localhost
+
+
+Uses
+-----------------------------------------------------------
+[https://github.com/dirkweber/traqball.js](https://github.com/dirkweber/traqball.js)
+
+[https://github.com/pkyeck/socket.IO-objc](https://github.com/pkyeck/socket.IO-objc)
+
+License
+-----------------------------------------------------------
+MIT License
