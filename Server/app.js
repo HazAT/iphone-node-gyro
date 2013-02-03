@@ -3,21 +3,13 @@ var express = require('express'),
     app = express(),
     server = http.createServer(app),
     io = require('socket.io').listen(server),
-    path = require('path')
-
-    users = [],
-    instances = [];
+    path = require('path');
 
 app.configure(function(){
   app.set('port', 3000);
-  app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.static(path.join(__dirname, 'public')));
-});
-
-app.configure('development', function () {
-  app.use(express.errorHandler());
 });
 
 app.get('/', function (req, res) {
@@ -31,7 +23,7 @@ io.sockets.on('connection', function (socket) {
   socket.on('move', function (data) {
     socket.broadcast.emit('move', data);
   });
-  
+
 });
 
-console.log('Gyro Server running on, port:'+app.get('port'));
+console.log('Gyro Server running on, port: ' + app.get('port'));
